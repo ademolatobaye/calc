@@ -1,0 +1,118 @@
+#parent{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgb(41, 38, 38);
+}
+body{
+    font-family: calibri;
+}
+#cont{
+    position: absolute;
+    height: 95%;
+    width: 25%;
+    margin: 1%;
+    border-radius: 20px 0px 20px 0px;
+    justify-self: center;
+    background-color: black;
+}
+form{
+    position: absolute;
+    top: 24%;
+    left: 2%;
+}
+#showtimer{
+    position: absolute;
+    top: 2%;
+    right: 5%;
+    color: white;
+    font-size: 13px;
+}
+#greeting{
+    position: absolute;
+    color: white;
+    top: 2%;
+    left: 3%;
+    font-size: 13px;
+}
+#dig{
+    border-radius: 80px;
+    height: 76px;
+    width: 80px;
+    background-color: rgb(41, 38, 38);
+    border: 0;
+    outline: none;
+    color: white;
+    font-weight: bolder;
+    font-size: 30px;
+}
+#dig:hover{
+    background-color: indigo;
+}
+#dig:active{
+    background-color: tomato;
+}
+#ac{
+    border-radius: 48%;
+    height: 76px;
+    width: 80px;
+    padding: 23px;
+    background-color: grey;
+    border: 0;
+    outline: none;
+    font-weight: bolder;
+    font-size: 30px;
+}
+#ac:hover{
+    background-color: crimson;
+}
+#ac:active{
+    background-color: plum;
+}
+#op{
+    border-radius: 50px;
+    height: 76px;
+    width: 80px;
+    padding: 20px;
+    background-color: orange;
+    color: white;
+    border: 0;
+    outline: none;
+    font-weight: bolder;
+    font-size: 30px;
+}
+#op:hover{
+    background-color: darkred;
+}
+#op:active{
+    background-color: royalblue;
+}
+#zero{
+    border-radius: 50px;
+    height: 65px;
+    width: 162px;
+    padding: 15px;
+    text-align: left;
+    background-color: rgb(41, 38, 38);
+    color: white;
+    border: 0;
+    outline: none;
+    font-weight: bolder;
+    font-size: 30px;
+}
+#zero:hover{
+    background-color: indigo;
+}
+#zero:active{
+    background-color: tomato;
+}
+#update{
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    color: white;
+    font-weight: bolder;
+    font-size: 30px;
+}

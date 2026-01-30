@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULATOR</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body onload="greet()">
+
+    <div id="parent">
+
+        <div id="cont">
+
+                <span id="showtimer"></span>
+                <span id="greeting"></span>
+                <span id="update"></span>
+
+
+            <form method="post">
+
+                <button type="button" onclick="clearAll('AC')" id="ac">AC</button>
+                <button type="button" onclick="toggleSign('+/-')" id="ac">+/-</button>
+                <button type="button" onclick="percent('%')" id="ac">%</button>
+                <button type="button" onclick="setOperator('/')" id="op">&divide;</button> <br><br>
+
+                <button type="button" onclick="setDigit('7')" id="dig">7</button>
+                <button type="button" onclick="setDigit('8')" id="dig">8</button>
+                <button type="button" onclick="setDigit('9')" id="dig">9</button>
+                <button type="button" onclick="setOperator('*')" id="op">&times;</button> <br><br>
+
+                <button type="button" onclick="setDigit('4')" id="dig">4</button>
+                <button type="button" onclick="setDigit('5')" id="dig">5</button>
+                <button type="button" onclick="setDigit('6')" id="dig">6</button>
+                <button type="button" onclick="setOperator('-')" id="op">-</button> <br><br>
+
+                <button type="button" onclick="setDigit('1')" id="dig">1</button>
+                <button type="button" onclick="setDigit('2')" id="dig">2</button>
+                <button type="button" onclick="setDigit('3')" id="dig">3</button>
+                <button type="button" onclick="setOperator('+')" id="op">+</button> <br><br>
+
+                <button type="button" onclick="setDigit('0')" id="zero">0</button>
+                <button type="button" onclick="decimal('.')" id="dig">.</button>
+                <button type="button" onclick="calculate('=')" id="op">=</button>
+
+
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    
+</body>
+</html>
