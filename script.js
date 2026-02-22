@@ -3,7 +3,7 @@ let currentNumber = "0";
 let previousNumber = "0";
 let currentOperator = "";
 
-// DISPLAY RESULT
+// UPDATING RESULTS
 function updateResult(){
     document.getElementById("update").textContent = currentNumber;
 }
@@ -19,7 +19,7 @@ function setDigit(digit){
     updateResult();
 }
 
-// OPERATORS
+// ALL OPERATORS
 function setOperator(operator){
     previousNumber = currentNumber;
     currentOperator = operator;
@@ -28,9 +28,7 @@ function setOperator(operator){
     updateResult();
 }
 
-
-
-// CALCULATE ALL INPUTS
+// CALCULATING ALL OPERATIONS
 function calculate(){
     let previous = parseFloat(previousNumber);
     let current = parseFloat(currentNumber);
@@ -38,16 +36,24 @@ function calculate(){
     if(currentOperator == "+"){
         currentNumber = (previous + current);
     }else if(currentOperator == "-"){
-        currentNumber = (previous + current);
-    }else if(currentOperator == "/"){
-        currentNumber = (previous / current);
+        currentNumber = (previous - current);
     }else if(currentOperator == "*"){
         currentNumber = (previous * current);
+    }else if(currentOperator == "/"){
+        currentNumber = (previous / current);
     }
 
     updateResult();
 }
 
+// CLEAR ALL
+function clearAll(){
+    currentNumber = "0";
+    previousNumber = "0";
+    currentOperator = "";
+
+    updateResult();
+}
 
 // DECIMAL
 function decimal(){
@@ -58,55 +64,41 @@ function decimal(){
     updateResult();
 }
 
-
-// TOOGGLESIGN
-function toggleSign(){
-    currentNumber = (currentNumber * Number("-1"));
-
-    updateResult();
-}
-
-
 // PERCENTAGE
 function percent(){
-    currentNumber = (currentNumber / Number("100"));
+    currentNumber = Number(currentNumber / "100");
 
     updateResult();
 }
 
-
-// CLEAR ALL
-function clearAll(){
-    currentNumber = "0";
-    previousNumber = "";
-    currentOperator = "";
+// TOGGLESIGN
+function toggleSign(){
+    currentNumber = Number(currentNumber * "-1");
 
     updateResult();
 }
-
 
 // TIMER
-setInterval(setTimer, 1000);
-
-function setTimer(){
+setInterval(timer, 1000);
+function timer(){
     let today = new Date();
     let time = today.toLocaleTimeString();
 
     document.getElementById("showtimer").textContent = time;
 }
 
-
 // GREETING
 function greet(){
-    let thisDay = new Date();
-    let hour = thisDay.getHours();
+    let currentDay = new Date();
+    let hour = currentDay.getHours();
     let name = prompt("Kindly input your name.");
 
     if(hour >= 0 && hour < 12){
         document.getElementById("greeting").textContent = `Good Morning ${name}.`;
-    }else if(hour >= 12 && hour < 16){
+    }else if(hour >=12 && hour < 16){
         document.getElementById("greeting").textContent = `Good Afternoon ${name}.`;
     }else{
         document.getElementById("greeting").textContent = `Good Evening ${name}.`;
     }
 }
+
