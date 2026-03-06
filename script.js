@@ -89,7 +89,7 @@ function timer(){
 
 // GREETING
 function greet(){
-    let currentDay = new Date();
+    let currentDay = new Date();z
     let hour = currentDay.getHours();
     let name = prompt("Kindly input your name.");
 
